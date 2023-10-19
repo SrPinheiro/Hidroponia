@@ -15,36 +15,55 @@ class SensorDePh{
         }
 
         double getPh(){
-            return this->sensorPH.read_ph_level();
+            double media = 0;
+
+            for(int i = 0; i < 20; i++){
+                media += this->sensorPH.read_ph_level();
+            }
+            media /= 20;
+
+            return media;
         }
 
         void calibrar(double phDesejado) {
-            double calibracao = 0;
-            double ph = 0;
-            double anteriorPh = 0;
-            double escala = 0.25;
+            double calibracao = -0.25;
+            double ph = -1;
+            double anteriorPh = -1;
+            double escala = 0.05;
 
-            while(true){
+            while(ph > phDesejado){
+                calibracao -= escala;
                 sensorPH.recalibrate(calibracao);
-                ph = sensorPH.read_ph_level();
+                ph = 0;
 
-                
-                if(ph >= phDesejado){
-                    // calcula o valor mais proximo do ph desejado e aplica a calibração desejada
-                    double deltA = phDesejado - anteriorPh;
-                    double deltB = ph - phDesejado;
-                    
-                    if(deltA < deltB){
-                        this->calibrate = calibracao;
-                    }else{
-                        this->calibrate = (calibracao - escala);
-                    }
-                    break;
-
-                }else{
-                    anteriorPh = ph;
-                    calibrate += escala;
+                for(int i = 0; i < 20; i++){
+                    ph += sensorPH.read_ph_level();
                 }
+
+                ph /= 20;
+            }
+
+            while(ph < phDesejado){
+                calibracao += escala;
+                sensorPH.recalibrate(calibracao);
+                anteriorPh = ph;
+                ph = 0;
+
+                for(int i = 0; i < 20; i++){
+                    ph += sensorPH.read_ph_level();
+                }
+
+                ph /= 20;
+            }
+
+            double deltA = phDesejado - anteriorPh;
+            double deltB = ph - phDesejado;
+            
+            if(deltA < deltB){
+                this->calibrate = calibracao;
+            }else{
+                this->calibrate = (calibracao - escala);
+                this->sensorPH.recalibrate(this->calibrate);
             }
         }
 };
