@@ -9,15 +9,15 @@ class SensorDeTemperatura{
 
 
     public:
-        SensorDeTemperatura() : dht11(2) {
+        SensorDeTemperatura() : dht11(4) {
             //Construtor
         }
         
-        double temperatura(){
+        double getTemperatura(){
             return this->dht11.readTemperature();
         }
 
-        double humidade(){
+        double getHumidade(){
             return this->dht11.readHumidity();
         }
 
