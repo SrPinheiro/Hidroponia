@@ -31,3 +31,6 @@
 ### `Mini Bomba Água`
 [mercado livre](https://produto.mercadolivre.com.br/MLB-2138024544-mini-bomba-agua-submersa-p-arduino-3v-a-6v-dc-120l-micro-_JM)
 
+### `Display LCD com i2c`
+[Bau da eletronica](https://www.baudaeletronica.com.br/produto/display-lcd-16x2-azul-com-modulo-adaptador-i2c.html?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEpFondlA_RidiDYMefffeIkruxp6DHAKugGD9_VZOPNtNlO3OUO32hoC8wgQAvD_BwE)
+
