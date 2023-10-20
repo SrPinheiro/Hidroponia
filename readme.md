@@ -4,6 +4,17 @@
 
 ## `Arduino Mega 2560`
 
+## Marcações:
+
+    A0 - Pino leitura de PH
+    A1 - Pino leitura de Temperatura modulo PH
+    RX0 - Pino saida Tx do modulo TDS
+    2 - Pino Data sensor de Temperatura
+    4 - Pino 5v Do modulo TDS
+    8 - Pino 5v Do Buzzer (apito)
+    SCL - Pino SCL do i2c (display)
+    SDA - Pino SDA do i2c (display)
+
 ## Sensores utilizados
 
 ### `DHT11 - Sensor de temperatura (ambiente)`
