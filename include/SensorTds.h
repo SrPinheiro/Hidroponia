@@ -1,6 +1,5 @@
 #ifndef SensorDePh_h
 #define SensorDePh_h
-
 class SensorTds{        
     public:
 
@@ -22,6 +21,8 @@ class SensorTds{
         private:
             double tds = 0;
             double temperatura = 0;
+            unsigned long startTime;
+            unsigned long timeout = 10000;
 
             // Este metodo faz a leitura dos bytes que o sensor envia
             // faz o tratamento os converte em char e depois em String
@@ -31,7 +32,12 @@ class SensorTds{
             void getInformacaoDoSensor(){
                 digitalWrite(2, HIGH);
                 String resultado = "";
+                startTime = millis();
                 while(true){
+                    if(millis() - startTime >= timeout){
+                        break;
+                    }
+
                     if(Serial.available() >= 8){
                         int value = Serial.read();
                         if( value != -1){
@@ -55,6 +61,8 @@ class SensorTds{
                         }
                     }
                 }
+                this->temperatura = 0;
+                this->tds = 0;
             }
 };
 
