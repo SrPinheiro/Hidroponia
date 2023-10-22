@@ -3,6 +3,7 @@
 
 class BombaDagua {
     public:
+        BombaDagua();
         void run();
 };
 

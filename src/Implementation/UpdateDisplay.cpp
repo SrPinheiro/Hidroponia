@@ -14,9 +14,9 @@ void UpdateDisplay::run(DataCache data){
     lcd.clear();
 
     lcd.setCursor(0,0);
-    lcd.print("Hum.: "+String(data.humid)+"%");
+    lcd.print("Hum: "+String(data.humid)+"%");
     lcd.setCursor(0,1);
-    lcd.print("Temp.: "+String(data.temp)+"'C");
+    lcd.print("Temp: "+String(data.temp)+"'C");
 
     delay(5000);
     lcd.clear();
@@ -24,7 +24,7 @@ void UpdateDisplay::run(DataCache data){
     lcd.setCursor(0,0);
     lcd.print("PH: " + String(data.ph));
     lcd.setCursor(0,1);
-    lcd.print("Temp. agua: " + String(data.tempi));
+    lcd.print("Temp agua: " + String(data.tempi));
 
     delay(5000);
     lcd.clear();
