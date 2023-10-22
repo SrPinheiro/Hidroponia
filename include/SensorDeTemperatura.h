@@ -2,6 +2,7 @@
 #define SensorDeTemperatura_h
 
 #include <DHT11.h>
+#include <Arduino.h>
 
 class SensorDeTemperatura{
     private:

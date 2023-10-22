@@ -1,5 +1,6 @@
 #ifndef SensorTds_h
 #define SensorTds_h
+#include <Arduino.h>
 
 class SensorTds{        
     public:
