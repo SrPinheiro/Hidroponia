@@ -1,11 +1,11 @@
-#ifndef SensorDePh_h
-#define SensorDePh_h
+#ifndef SensorTds_h
+#define SensorTds_h
+
 class SensorTds{        
     public:
 
         SensorTds(){
             pinMode(2, OUTPUT);
-            Serial.begin(300);
         }
 
         double getTds(){
@@ -30,6 +30,7 @@ class SensorTds{
             // e armazena os valores de temperatura e tds nas variaveis
             // privadas da classe
             void getInformacaoDoSensor(){
+                Serial1.begin(300);
                 digitalWrite(2, HIGH);
                 String resultado = "";
                 startTime = millis();
@@ -37,9 +38,8 @@ class SensorTds{
                     if(millis() - startTime >= timeout){
                         break;
                     }
-
-                    if(Serial.available() >= 8){
-                        int value = Serial.read();
+                    if(Serial1.available() >= 8){
+                        int value = Serial1.read();
                         if( value != -1){
                             if((value >= 48 and value <= 58) or value == 46){
                                 char caractere = static_cast<char>(value);
@@ -53,16 +53,17 @@ class SensorTds{
                                     this->tds = tds.toFloat();
                                 }
                                 digitalWrite(2, LOW);
-                                while(Serial.available() > 0){
-                                    Serial.read();
+                                while(Serial1.available() > 0){
+                                    Serial1.read();
                                 }
-                                break;
+                                return;
                             }
                         }
                     }
                 }
                 this->temperatura = 0;
                 this->tds = 0;
+                digitalWrite(2, LOW);
             }
 };
 

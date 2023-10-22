@@ -2,24 +2,22 @@
 #define SensorDePh_h
 #include <Arduino.h>
 #include <ph4502c_sensor.h>
-#include "DataSave.h"
 
-DataSave data;
 class SensorDePh{
     private:
         PH4502C_Sensor sensorPH;
-        double calibrate = 9.20;
+        double calibrate = 8;
         int ponteiro = 50;
         
 
     public:
         SensorDePh() : sensorPH(A0, A1){
-            this->calibrate = data.ler(this->ponteiro);
+            
         }
 
         double getPh(){
             double media = 0;
-
+            this ->sensorPH.recalibrate(calibrate);
             for(int i = 0; i < 20; i++){
                 media += this->sensorPH.read_ph_level();
             }
@@ -64,12 +62,10 @@ class SensorDePh{
             
             if(deltA < deltB){
                 this->calibrate = calibracao;
-                data.salvar(this->ponteiro, this->calibrate);
 
             }else{
                 this->calibrate = (calibracao - escala);
                 this->sensorPH.recalibrate(this->calibrate);
-                data.salvar(this->ponteiro, this->calibrate);
             }
         }
 };
