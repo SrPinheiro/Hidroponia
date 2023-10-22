@@ -6,13 +6,13 @@ Buzzer::Buzzer(){
 }
 
 void Buzzer::apitar(int tempo){
-    digitalWrite(8, HIGH);
+    digitalWrite(10, HIGH);
     delay(tempo);
-    digitalWrite(8, LOW);
+    digitalWrite(10, LOW);
 }
 
 void Buzzer::apitar(){
-    digitalWrite(8, HIGH);
+    digitalWrite(10, HIGH);
     delay(100);
-    digitalWrite(8, LOW);
+    digitalWrite(10, LOW);
 }
