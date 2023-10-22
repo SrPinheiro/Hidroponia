@@ -8,7 +8,7 @@
 class DataCache {
     public:
         int temp = 0;
-        int humid = 0;
+        int umid = 0;
         int ec = 0;
         int tempi = 0;
         double ph = 0;

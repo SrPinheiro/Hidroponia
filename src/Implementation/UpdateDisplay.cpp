@@ -14,7 +14,7 @@ void UpdateDisplay::run(DataCache data){
     lcd.clear();
 
     lcd.setCursor(0,0);
-    lcd.print("Hum: "+String(data.humid)+"%");
+    lcd.print("umid: "+String(data.umid)+"%");
     lcd.setCursor(0,1);
     lcd.print("Temp: "+String(data.temp)+"'C");
 

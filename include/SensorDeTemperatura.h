@@ -12,7 +12,7 @@ class SensorDeTemperatura{
         SensorDeTemperatura();
 
         double getTemperatura();
-        double getHumidade();
+        double getUmidade();
 };
 
 #endif

@@ -3,7 +3,7 @@
 
 void DataCache::run(){
     this->temp = this->sensorTemp.getTemperatura();
-    this->humid = this->sensorTemp.getHumidade();
+    this->umid = this->sensorTemp.getUmidade();
     this->ph = this->sensorDePh.getPh();
     this->sensorTds.updateData();
     this->ec = this->sensorTds.getSimpleTds();

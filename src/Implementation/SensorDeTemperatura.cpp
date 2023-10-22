@@ -10,6 +10,6 @@ double SensorDeTemperatura::getTemperatura(){
     return this->dht11.readTemperature();
 }
 
-double SensorDeTemperatura::getHumidade(){
+double SensorDeTemperatura::getUmidade(){
     return this->dht11.readHumidity();
 }
