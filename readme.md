@@ -11,7 +11,8 @@
     RX1 (digital 19) - Pino saida Tx do modulo TDS
     2 - Pino 5v Do modulo TDS
     4 - Pino Data sensor de Temperatura externo
-    8 - Pino 5v Do Buzzer (apito) Opcional
+    8 - Pino 5v do Buzzer (apito opcional)
+    10 - Pino 5v da bomba d'agua
     SCL - Pino SCL do i2c (display)
     SDA - Pino SDA do i2c (display)
 
