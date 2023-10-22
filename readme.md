@@ -15,7 +15,7 @@
     SCL - Pino SCL do i2c (display)
     SDA - Pino SDA do i2c (display)
 
-## Sensores utilizados
+## Components utilizados
 
 ### `DHT11 - Sensor de temperatura (ambiente)`
 [mercado livre](https://produto.mercadolivre.com.br/MLB-1858464511-sensor-de-temperatura-e-umidade-dht11-arduino-raspberry-pi-_JM#reco_item_pos=0&reco_backend=recomm-platform_v2p_univb&reco_backend_type=low_level&reco_client=vip-v2p&reco_id=b8e02eca-cc1c-4d08-a2a9-b53f6974c094)
@@ -33,15 +33,10 @@
 ### `TDS - solidos dissolvidos na agua`
 [Mercado livre](https://produto.mercadolivre.com.br/MLB-1786924532-sensor-tds-ppm-ec-arduino-rasppi-pic-termo-compensado-_JM)
 
-
-## Outros
-
-### `Painel Solar`
-[Mercado Livre](https://produto.mercadolivre.com.br/MLB-1946596090-painel-placa-com-fio-solar-6v-1w-200ma-110x60mm-mini-_JM)
-
-### `Mini Bomba Água`
-[mercado livre](https://produto.mercadolivre.com.br/MLB-2138024544-mini-bomba-agua-submersa-p-arduino-3v-a-6v-dc-120l-micro-_JM)
-
 ### `Display LCD com i2c`
 [Bau da eletronica](https://www.baudaeletronica.com.br/produto/display-lcd-16x2-azul-com-modulo-adaptador-i2c.html?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gclid=CjwKCAjwp8OpBhAFEiwAG7NaEpFondlA_RidiDYMefffeIkruxp6DHAKugGD9_VZOPNtNlO3OUO32hoC8wgQAvD_BwE)
 
+
+## Diagrama
+
+ ![Diagrama](assets\diagrama.png?raw=true)
