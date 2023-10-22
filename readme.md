@@ -8,10 +8,10 @@
 
     A0 - Pino leitura de PH
     A1 - Pino leitura de Temperatura modulo PH
-    RX0 - Pino saida Tx do modulo TDS
-    2 - Pino Data sensor de Temperatura
-    4 - Pino 5v Do modulo TDS
-    8 - Pino 5v Do Buzzer (apito)
+    RX1 (digital 19) - Pino saida Tx do modulo TDS
+    2 - Pino 5v Do modulo TDS
+    4 - Pino Data sensor de Temperatura externo
+    8 - Pino 5v Do Buzzer (apito) Opcional
     SCL - Pino SCL do i2c (display)
     SDA - Pino SDA do i2c (display)
 

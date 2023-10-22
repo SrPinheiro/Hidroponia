@@ -8,20 +8,11 @@ class SensorDeTemperatura{
     private:
         DHT11 dht11;
 
-
     public:
-        SensorDeTemperatura() : dht11(4) {
-            //Construtor
-        }
-        
-        double getTemperatura(){
-            return this->dht11.readTemperature();
-        }
+        SensorDeTemperatura();
 
-        double getHumidade(){
-            return this->dht11.readHumidity();
-        }
-
+        double getTemperatura();
+        double getHumidade();
 };
 
 #endif
